@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aerobic-exersise</title>
+</head>
+<style>
+  * {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.i:hover{
+  width: 430px;
+  height: 250px;
+}
+
+.image{
+ position: relative;
+ width: 200px;
+ height: 200px;
+ float: left;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.image div{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ background: white;
+ color: blue;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.image:hover{
+ cursor: pointer;
+}
+
+.image:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.9; 
+}
+  
+</style>
+<body>
+<h2 align="center" style="font-size: 40px;">AEROBIC-EXERSISES</h2>
+<br>
+<br>
+
+
+<div class="row">
+  <div class="column">
+    <div class="image">
+    <a href="jumprope.html"><img src="images/jump-rope.jpg" width="450px" height="260px" class="i"></a>
+    <div >JUMP-ROPE</div>
+    </div>
+  </div>
+  
+
+  <div class="column">
+    <div class="image">
+   <a href="running.html"> <img src="images/running.jpeg"width="450px" height="260px" class="i"></a>
+    <div align="center">RUNNING</div>
+  </div>
+</div>
+
+  <div class="column">
+    <div class="image">
+    <a href="swimming.html"><img src="images/swimming.jpg" width="450px" height="260px" class="i"></a>
+    <div align="center">SWIMMING</div>
+  </div>
+</div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="column">
+    <div class="image">
+   <a href="cycling.html"> <img src="images/cycling.jpg" width="450px" height="260px" class="i"></a>
+    <div align="center">CYCLING</div>
+  </div>
+</div>
+  <div class="column">
+   <div class="image">
+   <a href="indoor-cycling.html"> <img src="images/indoorcycling.jpg" width="450px" height="260px" class="i"></a>
+    <div align="center">INDOOR-CYCLING</div>
+  </div>
+</div>
+<div class="column">
+   <div class="image">
+   <a href="skating.html"> <img src="images/skating.jpg" width="450px" height="260px" class="i"></a>
+    <div align="center">SKATING</div>
+  </div>
+</div>
+  
+</body>
+<br>
+</html>
+
+

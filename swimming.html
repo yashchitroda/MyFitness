@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SWIMMING</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">SWIMMING</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/swimming.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/swimming1.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/swimming2.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/swimming3.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> <p>pool, swimsuit, goggles (optional)</p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> <p> Swimming is a low-impact exercise, so it's good for people prone to or recovering from an injury or living with limited mobility. It can help you tone your muscles and build strength and endurance</p>
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3><p>Avoid swimming alone and, if possible, choose a pool with a lifeguard on duty. If you're new to swimming, begin by enrolling in swim lessons.</p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3><p>10 to 30 minutes, 2 to 5 times a week. Add 5 minutes to your swim time each week to increase your duration</p>
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>If your gym has a pool, try swimming as aerobic exercise. It's a nonimpact workout, so it's a good choice if you're prone to injury. You're also increasing your heart rate, toning your muscles, and building strength and endurance — all without adding additional strain to your body.
+
+You can start by swimming laps using one stroke, such as freestyle. As you swim more, add additional strokes. For example, you could do 1 to 4 laps of freestyle followed by 1 to 4 laps of breaststroke or backstroke.</p>
+<h3 style="color: blue; font-size: 30px;">If you get tired</h3><p>rest on the side of the pool between laps. Always follow the safety instructions and guidelines of the pool where you swim.</p>
+
+</div>
+</body>
+</html>

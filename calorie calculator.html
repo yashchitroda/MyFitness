@@ -1,0 +1,72 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calorie calculator</title>
+    <style>
+        label {
+  display: block;
+  box-shadow: 0.1em 0.1em 0.2em #888;
+  margin: 1em;
+  border-radius: 1ex;
+  padding: 1ex 1em;
+}
+input[type=number] {
+  text-align: right;
+  border: none;
+}
+input {
+  float: right;
+}
+span {
+  font-weight: bold;
+}
+*{
+    background-color: black;
+    color: white;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 40px;">calorie calculator</h1>
+<label>Female:
+  <input id="female" type="radio"  name="gender" onchange="calsPerDay()">
+</label>
+<label>Male:
+  <input id="male" type="radio" name="gender" onchange="calsPerDay()" checked>
+</label>
+<label>Age:
+  <input id="age" type="number" style="border-radius: 30px;" oninput="calsPerDay()" value="19">
+  years
+</label>
+<label>Height:
+  <input id="height" type="number" style="border-radius: 30px;" oninput="calsPerDay()" value="60">
+  in inches (12 inches=1 foot)
+</label>
+<label>Weight:
+  <input id="weight" type="number" style="border-radius: 30px;" oninput="calsPerDay()" value="140">
+  in pounds
+</label>
+<label align ="center">
+  Base metabolic rate: <span id="totalCals" style="color: red;"></span> kcal per day
+</label>
+<script type="text/javascript">
+    function calsPerDay() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 2.54
+  var weight = find("weight").value / 2.2
+  var result = 0
+  if (find("male").checked) 
+    result = 66.47 + (13.75 * weight) + (5.0 * height - (6.75 * age))
+  else if (find("female").checked)
+    result = 665.09 + (9.56 * weight) + (1.84 * height - (4.67 * age))
+  find("totalCals").innerHTML = Math.round( result )
+}
+calsPerDay()
+</script>
+</body>
+<footer>
+  <p align="center" style="color: white; padding: 150px;">&copy; MyFitness 2021. All Rights Reserved &reg;</p>
+</footer>

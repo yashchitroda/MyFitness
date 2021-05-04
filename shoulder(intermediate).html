@@ -1,0 +1,142 @@
+<!DOCTYPE html>  
+<html> 
+<title>SHOULDER-INTERMEDIATE</title> 
+<head>  
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>  
+
+.container{width:100%}  
+.left{width:22%;float:left;}  
+.body{width:45%;float:left;}  
+.right{width:22%;float:left;}  
+body{
+	background-color: black;
+	color: white;
+}
+.i:hover{
+	width: 160%;
+	opacity: 0.8;
+
+}
+
+</style>  
+</head>  
+<body>  
+
+  <h1 align="center" style="background-color: blue;font-size: 40px;">SHOULDER-INTERMEDIATE</h1>
+<div class="container">  
+<div class="left">  
+<video src="images/swimmer.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/hoverpushup.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/floorstretchright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/floorstretchleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/cat.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/sissors.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/prone.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/pulls.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+
+	
+</div>  
+<div class="body" align="center"> 
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+ 
+    
+<fieldset style=" color: red; width: 30%;border-radius: 100%; background-color: grey; margin-left: 20%;">
+	 <button onclick="my()" style="padding: 12px; border-radius: 50%">
+            start
+        </button>
+        <b style="font-size: 20px;"><p id = "hi"></p>
+        <button onclick="u()" style="padding: 12px; border-radius: 50%;">
+            stop
+        </button>
+        <button onclick="re()" style="padding: 12px; border-radius: 50%">
+            reset
+        </button>
+        </fieldset>
+
+
+         <script>
+        var t=[0]
+        var f=[0]
+        var te=new Array(1)
+            function myAlert() {
+                document.getElementById("hi").innerHTML = t[0]/100
+                t[0]+=1    
+            }
+            
+            function u(){
+                clearInterval(te[0])
+                f[0]=0
+            }
+            
+            function my(){
+                if (f[0]==0){
+                   te[0] = setInterval(myAlert, 10) 
+                   f[0]=1
+                }
+                              
+            }
+            
+            function re(){
+                t[0]=0
+                myAlert()
+            }
+            function tired(){
+                alert("Take A Break Of 90 Seconds")
+            }
+            function nottired(){
+                alert("Continue ")
+            }
+        </script><br><br><br>
+        
+        <button onclick="tired()" style="padding:1%; border-radius: 30px; margin-left:20%;">Feeling Exausted?</button>
+        <button onclick="nottired()" style="padding:1%; border-radius: 30px;">Not Exausted!!</button>
+</div>  
+<div class="right">  
+<video src="images/childpose.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/hiphinge.mp4" width="150%" height="10%" autoplay="true" muted="true"loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/kickbacktriceps.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/knee.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/prone.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/inclinepushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/hoverpushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+<video src="images/cat.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<br>
+<br>
+
+</div>  
+</div>  
+
+  
+</body>  
+</html>  

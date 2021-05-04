@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anaerobic-Exercise</title>
+</head>
+<style>
+  * {
+  box-sizing: border-box;
+  background-color: black;
+  color: white;
+}
+
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clearfix (clear floats) */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.i:hover{
+  width: 430px;
+  height: 250px;
+}
+
+.image{
+ position: relative;
+ width: 200px;
+ height: 200px;
+ float: left;
+ margin-right: 10px;
+}
+
+/* Child Text Container */
+.image div{
+ position: absolute;
+ bottom: 0;
+ right: 0;
+ background: white;
+ color: blue;
+ margin-bottom: 5px;
+ font-family: sans-serif;
+ opacity: 0;
+ visibility: hidden;
+ -webkit-transition: visibility 0s, opacity 0.5s linear; 
+ transition: visibility 0s, opacity 0.5s linear;
+}
+
+/* Hover on Parent Container */
+.image:hover{
+ cursor: pointer;
+}
+
+.image:hover div{
+ width: 150px;
+ padding: 8px 15px;
+ visibility: visible;
+ opacity: 0.9; 
+}
+  
+</style>
+<body>
+<h2 align="center" style="font-size: 40px;">ANAEROBIC-EXERCISE</h2>
+
+<br><br><br><br>
+<div class="row"  style="margin-left: 10%;">
+  <div class="column">
+    <div class="image">
+    <a href="weightlifting.html"><img src="images/weightlifting.jpg" width="450px" height="260px" class="i"></a>
+    <div align="center">WEIGHT-LIFTING</div>
+    </div>
+  </div>
+  
+
+  <div class="column"  style="margin-left: 10%;">
+    <div class="image">
+   <a href="pushups.html"> <img src="images/c.jpg"width="450px" height="260px" class="i"></a>
+    <div align="center">PUSHUPS</div>
+  </div>
+</div>
+</div>
+<br><br><br><br>
+<div class="row"  style="margin-left: 10%;">
+  <div class="column">
+    <div class="image">
+     <a href="isometrices.html"><img src="images/isometrices.jpeg" width="450px" height="260px" class="i"></a>
+    <div align="center">ISOMETRICES</div>
+    </div>
+  </div>
+  
+
+  <div class="column"  style="margin-left: 10%;">
+    <div class="image">
+   <a href="rowing.html"> <img src="images/rowing.png" width="450px" height="260px" class="i"></a>
+    <div align="center">ROWING</div>
+  </div>
+</div>
+</div>
+
+ 
+  
+</body>
+
+</html>
+
+

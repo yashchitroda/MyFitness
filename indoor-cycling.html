@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>INDOOR-CYCLING</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">INDOOR-CYCLING</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/indoorcycling.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/indoorcycling1.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/indoorcycling2.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/indoorcycling3.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> <p>stationary bike</p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> <p>This low-impact exercise can help develop leg strength. </p>
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3><p>
+  Ask a trainer at the gym for help adjusting the bike so that the seat is the correct height. This will help reduce your risk for injury or falling off the bike.
+
+If you're biking at home, a general rule is to adjust the bike seat height to maintain a 5- to 10-degree bend in your knee before reaching full extension. Doing so reduces compression on your knee joint. It's not recommended to fully extend your knee while peddling on a stationary bike.
+</p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3> <p>
+  35 to 45 minutes, 3 times per week
+</p>
+
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>
+  Riding a stationary bike is another option for low-impact cardio. Stationary bikes are a good cardiovascular workout, help you develop leg strength, and are easy to use. Many gyms and workout studios offer cycling classes, which use stationary bikes. But you can still benefit from a stationary bike workout without taking a class.
+
+After stretching and warming up by cycling at an easy rhythm for 5 to 10 minutes, increase your pace to 15 miles per hour and aim for 20 to 30 minutes of steady cycling. Cool down for 5 minutes. Stretch to finish.
+</p>
+
+
+</div>
+</body>
+</html>

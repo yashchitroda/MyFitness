@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ISOMETRICES</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">ISOMETRICES</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/isometrices2.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/isometrices3.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/isometrices4.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/isometrices5.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> 
+<p> yoga mat</p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> 
+<p> it is a simple, but effective core exercise that helps you build stability and strength throughout your entire body. The plank is achievable in a number of different methods, but the main goal of the plank exercise will have you with your body perpendicular to the ground, stomach facing down, elevating your torso off the ground with either your elbows or hands.  </p>
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3>
+<p> 
+  <ul style="font-size: 19px;">
+  <li>Keep your body in a straight line, from your head to your heels. Your back should be flat, and your butt should be down, not piking upward.</li>
+<li>Focus on quality over quantity. If your form starts to feel compromised, stop or drop to your knees to complete your time for the day.</li>
+</ul></p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3>
+<p>If you're truly bracing all of your muscles, it can be hard for someone to hold a plank for longer than 20 seconds - and a minute at most. recommended bursts of 20 seconds at a time. "Long planks do more damage than good"</p>
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p> Engage your core during the entire movement to prevent your back from getting strained or injured. Keep your body in a straight line, from your head to your heels. Your back should be flat, and your butt should be down, not piking upward.<br>
+If you're new to planks, you can start by performing them on your knees. You can also ask a friend or certified personal trainer at your gym to watch your technique and confirm that your form is correct.</p>
+
+
+</div>
+</body>
+</html>

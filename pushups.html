@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUSHUPS</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">PUSHUPS</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/c.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/pushups1.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/pushups2.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/pushups3.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> 
+<p>Push-ups require no equipment other than a hard surface. </p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> 
+<p> he upper body muscles that come into play in the pushup are the deltoids of the shoulders, the pectoral muscles of the chest, the triceps and biceps of the upper arm, and the erector spinae of the back. The abdominal muscles used to hold the body rigid during the pushup are the rectus abdominis and the transversus abdominis. As the pushup involves multiple joints, it is a compound exercise  </p>
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3>
+<p> Put your hands directly under your shoulders.
+Keep your body in a straight, strong line.
+No sagging-keep everything tight and don't arch your back!
+Push through your shoulders.
+Keep your elbows in and arms tight to your ribs.
+Lower as far as possible, aiming for the ground</p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3>
+<p>if you do 20 pushups in 25 seconds, you'll rest 25 seconds, and repeat. </p>
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>Begin with your chest and stomach flat on the floor. ...
+Exhale as you push from your hands and heels, bringing your torso, chest, and thighs off the ground.
+Pause for a second in the plank position - keep your core engaged.
+Inhale as you slowly lower back to your starting position. </p>
+
+
+</div>
+</body>
+</html>

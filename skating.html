@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SKATING</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">SKATING</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/skating.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/skating3.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/skating1.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/skating2.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> <p>roller skates , Figure Skating Boots , safety helmet , knee gaurd</p>
+ 
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> <p> There are many reasons you should incorporate skaters into your workouts. Here are just a few:</p>
+
+
+<p>High-Intensity Interval Benefits , Work Your Lower Body And Core , Cardio Exercise At Home</p>
+
+
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3><p>Skate during daylight hours , Skate with a friend, if possible. , Try to use recreational trails. Avoid sidewalks and roads as much as possible. If you must use roadways, never skate in traffic. , Stay to the right when skating on sidewalks, bike paths, and trails. If you're going to pass another person, do so on the left and call out "On your left!" to let them know you're coming.
+ </p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3> <p>30 to 45 minutes, 3 to 4 times per week</p>
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>Get a helmet to protect your head, and consider elbow pads and wrist guards. Clear a safe area whenever you practice: sharp and delicate things should be out of reach, and never try to go down stairs or navigate tricky terrain unless you're very sure of your skills.</p>
+<p>The first step in learning (or relearning) to skate is simply training your body in how to move when you have wheels under you. The fastest way to accomplish this is to just wear your skates at home, whether your house contains good places to skate or not.
+
+Even if all your floors are carpeted, you'll get the sense of where to place your weight on your foot as you walk around. Perhaps you'll find yourself popping up onto your toe stops to get up from a chair. And when you wear your skates in a small space, like in your kitchen while you're washing dishes, you'll discover all kinds of ways to pivot and maneuver on your wheels while you're standing still. All these skills will serve you well when you move out to the rink or the dance floor or the street.</p>
+
+
+</div>
+</body>
+</html>

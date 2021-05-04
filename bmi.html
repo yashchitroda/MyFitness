@@ -1,0 +1,77 @@
+<html>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator</title>
+ <style type="text/css">
+            *{
+                padding: 10px;
+                font-size: 20px;
+                text-align: center;
+                color: cyan;
+                text-transform: capitalize;
+                background-color: black;
+            }
+
+           
+        </style>
+<script type="text/javascript">
+    function computeBMI()
+    {
+        var height=Number(document.getElementById("height").value);
+        var heightunits=document.getElementById("heightunits").value;
+        var weight=Number(document.getElementById("weight").value);
+        var weightunits=document.getElementById("weightunits").value;
+        if (heightunits=="inches") height/=39.3700787;
+        if (weightunits=="lb") weight/=2.20462;
+        var BMI=weight/Math.pow(height,2);
+        document.getElementById("output").innerText=Math.round(BMI*100)/100;
+        var output =  Math.round(BMI*100)/100
+        if (output<18.5)
+        document.getElementById("comment").innerText = "Underweight";
+      else   if (output>=18.5 && output<=25)
+        document.getElementById("comment").innerText = "Normal";
+     else   if (output>=25 && output<=30)
+        document.getElementById("comment").innerText = "Obese";
+     else   if (output>30)
+        document.getElementById("comment").innerText = "Overweight";
+    }
+</script>
+ </head>
+ <body>
+<div style="background-color: black; ">
+    <img src="images/BMI.jpg" style="width: 50%;height:50%;">
+    </div>
+<h1 style="font-size: 40px; padding: 20px; color: white;">Body Mass Index Calculator</h1>
+
+<div style="background-image: url('images/e.jpg'); height: 100%; width: 100%;">
+
+<label>Enter your height: <input type="text" id="height" style="border-radius: 30px;" />
+    <select type="multiple" id="heightunits">
+        <option value="metres" selected="selected">metres</option>
+        <option value="inches">inches</option>
+    </select>
+   <br>
+   <br>
+     
+<label>Enter your weight: <input type="text" id="weight" style="border-radius: 30px;"/>
+    <select type="multiple" id="weightunits">
+        <option value="kg" selected="selected">kilograms</option>
+        <option value="lb">pounds</option>
+    </select>
+    <br>
+    <br>
+
+<input type="submit" value="check your BMI" onclick="computeBMI();">
+<br>
+<br>
+<label>Your BMI is: <span id="output">?</span>
+<br>
+<br>
+<label>This means you are: <span id="comment"> ?</span> 
+
+</div>
+
+<p align="center" style="color: white; padding: 7px;">&copy; MyFitness 2021. All Rights Reserved &reg;</p>
+
+ </body>
+ </html>

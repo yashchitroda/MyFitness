@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ROWING</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">ROWING</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/rowing.png" height="600px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/rowing1.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/rowing2.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/rowing3.jpg" height="600px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> 
+<p>Rowing machine </p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> 
+<p> Rowing is an efficient way to burn calories, as well as build strong and defined muscles - but is it enough to help you shed stubborn belly fat, compared to other forms of cardio like running?<br> The short answer is yes. ... Instead, you'll need to work to elevate your heart rate, which will help you shed fat all over.  </p>
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3>
+<p> Always you both your hands while working out on the rowing machine. If your hands get sweaty, never try to use on of your hands wipe it down on</p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3>
+<p>in terms of time, weight loss is best achieved with consistency, so aim for at least 30 minutes per day on a rower, anywhere from 4 to 6 times a week. Make sure you're getting enough rest days, especially if you're just getting started! </p>
+
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>The rowing machine can be intimidating, but once you get the hang of it, it's an effective way to spice up your cardio routine. But while the rowing machine, also called an ergometer, is a calorie buster (about 280 calories in 30 minutes for an 130-pound woman) and a good leg and core workout, improper form can lead to back injuries if you're not careful. </p>
+
+
+</div>
+</body>
+</html>

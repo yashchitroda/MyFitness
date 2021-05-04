@@ -1,0 +1,145 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>diet calculator </title>
+    <style>
+
+  label {
+  display: block;
+  box-shadow: 0.1em 0.1em 0.2em #888;
+  margin: 1em;
+  border-radius: 1ex;
+  padding: 1ex 1em;
+  background-color: white;
+  color: black;
+}
+input[type=number] {
+  text-align: center;
+  border: none;
+  background-color: cyan;
+  color: black;
+  width: 10%;
+
+}
+input {
+  float: right;
+}
+span {
+  font-weight:bolder;
+}
+*{
+    background-color:#befca8;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px; color: black;">diet calculator</h1>
+<label><b style="background-color: white;">Female:</b>
+  <input id="female" type="radio"  name="gender" onchange="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()">
+</label>
+<label><b style="background-color: white;">Male:</b>
+  <input id="male" type="radio" name="gender" onchange="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" checked>
+</label>
+<label><b style="background-color: white;">Age:</b>
+  <input id="age" type="number"minlength="1" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="19">
+  (in years)
+</label>
+<label><b style="background-color: white;">Height:</b>
+  <input id="height" type="number" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="70">
+  in inches (12 inches=1 foot)
+</label>
+<label><b style="background-color: white;">Weight:</b>
+  <input id="weight" type="number" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="140">
+  in pounds
+</label>
+<label align ="center">
+  consume <span id="totalCals" style="color: green; background-color:white;"></span> gm of green vegetables a day
+</label>
+<script type="text/javascript">
+    function calsPerDay() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 2.54
+  var weight = find("weight").value / 2.2
+  var result = 0
+  if (find("male").checked) 
+    result = 1.47 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 1.09 + (1.56 * weight) + (1.84 * height - (1.67 * age))
+  find("totalCals").innerHTML = Math.round( result )
+}
+calsPerDay()
+</script>
+
+
+<!-- for pulses-->
+<label align ="center">
+  consume <span id="totalCals1" style="color: brown; background-color:white;"></span> gm of pulses a day
+</label>
+<script type="text/javascript">
+    function calsPerDay1() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 1.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 0.47 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 0.09 + (0.56 * weight) + (1.04 * height - (1.07 * age))
+  find("totalCals1").innerHTML = Math.round( result )
+}
+calsPerDay1()
+</script>
+
+
+<!-- for water-->
+<label align ="center">
+  consume  <span id="totalCals2" style="color: blue; background-color:white;"></span> ml of water a day
+</label>
+<script type="text/javascript">
+    function calsPerDay2() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 1.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 3.47 + (8.75 * weight) + (4.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 2.09 + (6.56 * weight) + (3.04 * height - (1.07 * age))
+  find("totalCals2").innerHTML = Math.round( result )
+}
+calsPerDay2()
+</script>
+
+
+
+<!-- for dairy product-->
+<label align ="center">
+  consume  <span id="totalCals3" style="color: grey; background-color:white;"></span> gm of dairy product a day
+</label>
+<script type="text/javascript">
+    function calsPerDay3() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 0.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 0.07 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 0.09 + (0.56 * weight) + (1.04 * height - (1.07 * age))
+  find("totalCals3").innerHTML = Math.round( result )
+}
+calsPerDay3()
+</script>
+</body>
+<footer>
+  <p align="center" style="color: black; padding: 150px;">&copy; MyFitness 2021. All Rights Reserved &reg;</p>
+</footer>

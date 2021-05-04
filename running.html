@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RUNNING</title>
+<style type="text/css">
+#slide{
+  width:96%;
+  }
+  
+* {
+  box-sizing: border-box;
+  text-transform: capitalize;
+}
+
+.mySlides {
+  display: none
+}
+
+.slideshow-container {
+  width: 1200px;
+  position: relative;
+  margin: -10px;
+
+}
+
+.prev, .next {
+  cursor:progress;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: black;
+  font-weight: bolder;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 5px 5px 0;
+}
+
+.next {
+  right: 0;
+  border-radius: 5px 0 0 5px;
+}
+
+.prev {
+  left: 0;
+  border-radius: 5px 0 0 5px;
+
+}
+p{
+  font-size: 20px;
+}
+body{
+  background-color: black;
+  color: white;
+}
+div.y{
+  text-align: left;
+}
+</style>
+</head>
+<body>
+<h1 align="center" style="font-size: 50px;">RUNNING/JOGGING</h1>
+<div align="center">
+
+
+  <br>
+<div id="slide" align="center">
+  <div class="slideshow-container">
+     <div class="mySlides fade"> <img src="images/z.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+      <div class="mySlides fade"> <img src="images/run.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/running.jpeg" height="500px" width="1000px;" style="width:100%"> </div>
+    <div class="mySlides fade"> <img src="images/jogging.jpg" height="500px" width="1000px;" style="width:100%"> </div>
+  
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a> <a class="next" onclick="plusSlides(1)">&#10095;</a> </div>
+  <br>
+
+
+   <script type="text/javascript">
+   var slideIndex = 0;
+showSlides();
+var slides;
+
+function showSlides() {
+    var i;
+    slides = document.getElementsByClassName("mySlides");
+    dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex> slides.length) {slideIndex = 1}    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+function plusSlides(position) {
+    slideIndex +=position;
+    if (slideIndex> slides.length) {slideIndex = 1}
+    else if(slideIndex<1){slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+   
+    slides[slideIndex-1].style.display = "block";  
+
+}
+function currentSlide(index) {
+    if (index> slides.length) {index = 1}
+    else if(index<1){index = slides.length}
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }   
+    slides[index-1].style.display = "block";  
+    dots[index-1].className += " active";
+}
+</script>
+<div class="y">
+
+<h3 style="color: blue; font-size: 30px;">Equipment:</h3> <p>running shoes</p>
+
+<h3 style="color: blue; font-size: 30px;">Benefits:</h3> <p> Running is one of the most effective forms of aerobic exercise. It can improve heart health, burn fat and calories, and lift your mood, just to name a few.</p>
+
+<p>Walking daily can reduce your risk of heart disease, obesity, diabetes, high blood pressure, and depression.</p>
+
+
+
+<h3 style="color: blue; font-size: 30px;">Safety:</h3><p>Walk in well-lit and populated areas. Choose shoes that offer good ankle support to reduce your risk for injury.</p>
+
+
+<h3 style="color: blue; font-size: 30px;">Duration and frequency:</h3> <p>running:20 to 30 minutes, 2 to 3 times per week</p>
+
+<p>walking:150 minutes per week, or 30 minutes 5 days a week
+Following a jump rope circuit is a great indoor or outdoor activity, though you’ll want to make sure you have plenty of space. Your circuit routine should take 15 to 25 minutes to complete.</p>
+
+<h3 style="color: blue; font-size: 30px;">If you're a beginner:</h3>
+
+<p>run for 20 to 30 minutes twice a week. Your pace should be conversational during the run. You can alternate between 5 minutes of running and 1 minute of walking to start. To stay injury-free, always stretch after your run.</p>
+
+<p>If walking is your main form of exercise, aim to get 150 minutes per week. This can be broken down into 30 minutes of walking 5 days a week. Or, walk briskly for 10 minutes at a time, 3 times each day.</p>
+
+<p>You can also use a fitness tracker to keep tabs on how many steps you take each day. If your goal is to walk 10,000 steps a day, start with your base (current amount you walk) and slowly up your daily step count. You can do this by increasing your daily steps by an extra 500 to 1,000 steps a day every 1 to 2 weeks.</p>
+
+<p>So, once you’ve identified your base, add an extra 500 to 1,000 steps. Then, 1 to 2 weeks later, increase your daily step count by an additional 500 to 1,000 steps.</p>
+</div>
+</body>
+</html>

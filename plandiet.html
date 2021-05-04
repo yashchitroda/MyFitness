@@ -1,0 +1,266 @@
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>plan diet </title>
+    <style>
+
+  label {
+  display: block;
+  box-shadow: 0.1em 0.1em 0.2em #888;
+  margin: 1em;
+  border-radius: 1ex;
+  padding: 1ex 1em;
+  background-color: white;
+  color: black;
+}
+input[type=number] {
+  text-align: center;
+  border: none;
+  background-color: cyan;
+  color: black;
+  width: 10%;
+
+}
+input {
+  float: right;
+}
+span {
+  font-weight:bolder;
+}
+*{
+    background-color:#befca8;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.i:hover{
+  font-size: 30px;
+  font-family: sans-serif;
+  color: red;
+}
+</style>
+</head>
+<body>
+  <div class="content">
+  <div align="center">
+    <h1 style="background-color:black; opacity: 0.7; color: white; font-size: 50px; position: sticky;" align="center">MyFitness</h1>
+  <h1 style="font-size: 30px;">Balanced Diet Chart</h1>
+  
+  <img src="images/diet1.jpg" height="500px" width="650px" align="center">
+  </div>
+  <br>
+  <fieldset>
+  <h1><u>What Is A Balanced Diet?</u></h1>
+
+ <h2 style="text-align: center;"><a href="dietcalculator.html" class="i" style="text-decoration: none;">--> plan your diet with MyFitness now <--</a></h2>
+
+  <p style="font-size: 25px">A balanced diet gives your body the nutrients it needs to function correctly. To get the nutrition you need, most of your daily calories should come from:</p>
+
+  <ul>
+    <li>Fresh fruits</li><br>
+    <li>Fresh vegetables</li><br>
+    <li>Whole grains</li><br>
+    <li>Legumes</li><br>
+    <li>Nuts</li><br>
+    <li>Lean proteins</li><br>
+  </ul>
+</fieldset>
+<br>
+<fieldset>
+  <h1 align="center"><u>calories</u></h1>
+  
+  <div align="center">
+
+  <img src="images/calories.jpeg" height="400px" width="550px" style="opacity: 0.7;" align="center">
+  </div>
+
+<p style="font-size: 23px;">The number of calories in a food refers to the amount of energy stored in that food. Your body uses calories from food for walking, thinking, breathing, and other important functions.</p>
+
+<p style="font-size: 23px;">The average person needs about 2,000 calories every day to maintain their weight, but the amount will depend on their age, sex, and physical activity level.</p>
+
+<p style="font-size: 23px;">Males tend to need more calories than females, and people who exercise need more calories than people who don’t.</p><br>
+<b style="font-size: 20px;">Examples of foods that provide low/empty calories include:</b>
+
+  <ul>
+    <li>Cakes, Cookies, and Donuts</li><br>
+    <li>Processed meats</li><br>
+    <li>Energy drinks and sodas</li><br>
+    <li>Fruit drinks with added sugar</li><br>
+    <li>Ice-cream</li><br>
+    <li>Chips and fries</li><br>
+    <li>Pizza</li><br>
+    <li>Sodas</li><br>
+  </ul>
+</fieldset>
+<br>
+<fieldset>
+  <h1 align="center"><u>What to eat for a balanced diet</u></h1>
+
+<p style="font-size: 20px;">A healthy, balanced diet will usually include the following nutrients:</p>
+  
+  <ul>
+    <li>vitamins, minerals, and antioxidants</li>
+    <li>carbohydrates, including starches and fiber</li>
+    <li>protein</li>
+    <li>healthy fats</li>
+  </ul>
+
+<p style="font-size: 20px;">A balanced diet will include a variety of foods from the following groups:</p>
+
+  <ul>
+    <li>fruits</li>
+    <li>vegetables</li>
+    <li>grains</li>
+    <li>dairy</li>
+    <li>protein foods</li>
+  </ul>  
+<p style="font-size: 19px;">Examples of protein foods include: <b> meat, eggs, fish, beans, nuts, and legumes</b></p>
+</p>
+</fieldset>
+<br>
+<fieldset>
+  <h1><u>Foods to avoid in diet</u></h1>
+
+<p style="font-size: 20px;">Foods to avoid or limit on a healthy diet include:</p>
+
+  <ul>
+    <li>Highly processed foods</li><br>
+    <li>Oily food</li><br>
+    <li>Refined grains</li><br>
+    <li>Added sugar and salt</li><br>
+    <li>Red and processed meat</li><br>
+    <li>Alcohol</li><br>
+  </ul>
+</fieldset>
+<br>
+<fieldset>
+  <h1 align="center"><u>Vegetables</u></h1>
+
+  <div align="center">
+
+  <img src="images/healthyvegitables.jpg" height="400px" width="550px" style="opacity: 0.7;" align="center">
+  </div>
+  <br>
+
+<p style="font-size: 25px;">Vegetables are a key source of essential vitamins, minerals, and antioxidants. Eat a variety of vegetables with different colors for a full range of nutrients.</p>
+
+<p style="font-size: 20px;"><b>Dark, leafy greens are an excellent source of many nutrients. They include:</b></p>
+  
+  <ul>
+    <li>spinach</li><br>
+    <li>carrot</li><br>
+    <li>green beans</li><br>
+    <li>green peas</li><br>
+    <li>broccoli</li><br>
+    <li>collard greens</li><br>
+    </ul>
+</div>
+</body>
+<h1 align="center" style="font-size: 50px; color: black;">diet calculator</h1>
+<label><b style="background-color: white;">Female:</b>
+  <input id="female" type="radio"  name="gender" onchange="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()">
+</label>
+<label><b style="background-color: white;">Male:</b>
+  <input id="male" type="radio" name="gender" onchange="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" checked>
+</label>
+<label><b style="background-color: white;">Age:</b>
+  <input id="age" type="number"minlength="1" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="19">
+  (in years)
+</label>
+<label><b style="background-color: white;">Height:</b>
+  <input id="height" type="number" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="70">
+  in inches (12 inches=1 foot)
+</label>
+<label><b style="background-color: white;">Weight:</b>
+  <input id="weight" type="number" style="border-radius: 30px;" oninput="calsPerDay(),calsPerDay1(),calsPerDay2(),calsPerDay3()" value="140">
+  in pounds
+</label>
+<label align ="center">
+  consume <span id="totalCals" style="color: green; background-color:white;"></span> gm of green vegetables a day
+</label>
+<script type="text/javascript">
+    function calsPerDay() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 2.54
+  var weight = find("weight").value / 2.2
+  var result = 0
+  if (find("male").checked) 
+    result = 1.47 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 1.09 + (1.56 * weight) + (1.84 * height - (1.67 * age))
+  find("totalCals").innerHTML = Math.round( result )
+}
+calsPerDay()
+</script>
+
+
+<!-- for pulses-->
+<label align ="center">
+  consume <span id="totalCals1" style="color: brown; background-color:white;"></span> gm of pulses a day
+</label>
+<script type="text/javascript">
+    function calsPerDay1() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 1.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 0.47 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 0.09 + (0.56 * weight) + (1.04 * height - (1.07 * age))
+  find("totalCals1").innerHTML = Math.round( result )
+}
+calsPerDay1()
+</script>
+
+
+<!-- for water-->
+<label align ="center">
+  consume  <span id="totalCals2" style="color: blue; background-color:white;"></span> ml of water a day
+</label>
+<script type="text/javascript">
+    function calsPerDay2() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 1.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 3.47 + (8.75 * weight) + (4.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 2.09 + (6.56 * weight) + (3.04 * height - (1.07 * age))
+  find("totalCals2").innerHTML = Math.round( result )
+}
+calsPerDay2()
+</script>
+
+
+
+<!-- for dairy product-->
+<label align ="center">
+  consume  <span id="totalCals3" style="color: grey; background-color:white;"></span> gm of dairy product a day
+</label>
+<script type="text/javascript">
+    function calsPerDay3() {
+  function find(id) { return document.getElementById(id) }
+
+  var age = find("age").value
+  var height = find("height").value * 0.54
+  var weight = find("weight").value / 1.2
+  var result = 0
+  if (find("male").checked) 
+    result = 0.07 + (1.75 * weight) + (1.0 * height - (1.75 * age))
+  else if (find("female").checked)
+    result = 0.09 + (0.56 * weight) + (1.04 * height - (1.07 * age))
+  find("totalCals3").innerHTML = Math.round( result )
+}
+calsPerDay3()
+</script>
+
+</body>
+<footer>
+  <p align="center" style="color: black; padding: 150px;">&copy; MyFitness 2021. All Rights Reserved &reg;</p>
+</footer>
