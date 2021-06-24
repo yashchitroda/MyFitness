@@ -1,6 +1,6 @@
 <!DOCTYPE html>  
 <html> 
-<title>ABS-BEGINNER</title> 
+<title>ARMS-BEGINNER</title> 
 <head>  
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <style>  
@@ -22,23 +22,54 @@ body{
 </style>  
 </head>  
 <body>  
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(window).on("load", function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity") == 0) {
+          $(this).fadeTo(500, 1);
+        }
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity") == 1) {
+          $(this).fadeTo(500, 0);
+        }
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+  </script>
+
 
   <h1 align="center" style="background-color: blue;font-size: 40px;">ARMS-BEGINNER</h1>
 <div class="container">  
-<div class="left">  
-<video src="images/jumpingjacks.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+<div class="left">
+
+<div class="fade">
+<video src="images/jumpingjacks.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/wall.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/wall.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/punches.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/punches.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/pushups.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/pushups.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/diagonalplank.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/diagonalplank.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
@@ -99,20 +130,26 @@ body{
         <button onclick="tired()" style="padding:1%; border-radius: 30px; margin-left:20%;">Feeling Exausted?</button>
         <button onclick="nottired()" style="padding:1%; border-radius: 30px;">Not Exausted!!</button>
 </div>  
-<div class="right">  
-<video src="images/armrsaise.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="right">
+
+<div class="fade"> 
+<video src="images/armrsaise.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/sidearm.mp4" width="150%" height="10%" autoplay="true" muted="true"loop="true" class="i"></video>
+<div class="fade">
+<video src="images/sidearm.mp4" width="150%" height="10%" autoplay="true" muted="true"loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/triceps.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/triceps.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/armanticlock.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/armanticlock.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/armclock.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/armclock.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
