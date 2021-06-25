@@ -22,38 +22,71 @@ body{
 </style>  
 </head>  
 <body>  
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(window).on("load", function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
 
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity") == 0) {
+          $(this).fadeTo(500, 1);
+        }
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity") == 1) {
+          $(this).fadeTo(500, 0);
+        }
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+  </script>
   <h1 align="center" style="background-color: blue;font-size: 40px;">LEGS-ADVANCE</h1>
 <div class="container">  
 <div class="left">  
-<video src="images/donkeyleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+    <div class="fade">
+<video src="images/donkeyleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/donkeyright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/donkeyright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/lying right.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/lying right.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/lying left.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/lying left.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/stretchleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/stretchleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/stretchright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/stretchright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/cheststrechright.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/cheststrechright.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/cheststrechleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/cheststrechleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/squats.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/squats.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/sidehop.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/sidehop.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
@@ -115,34 +148,44 @@ body{
         <button onclick="nottired()" style="padding:1%; border-radius: 30px;">Not Exausted!!</button>
 </div>  
 <div class="right">  
-<video src="images/wallsit.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+    <div class="fade">
+<video src="images/wallsit.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/reverse kicks.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/reverse kicks.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/squats.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/squats.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/sumosquat.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/sumosquat.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/sidehop.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/sidehop.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/leftcircle.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/leftcircle.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/fireleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/fireleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/fireright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/fireright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/backward.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/backward.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/reverse kicks.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/reverse kicks.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
