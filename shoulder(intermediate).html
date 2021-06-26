@@ -22,32 +22,64 @@ body{
 </style>  
 </head>  
 <body>  
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script>
+    $(window).on("load", function() {
+  $(window).scroll(function() {
+    var windowBottom = $(this).scrollTop() + $(this).innerHeight();
+    $(".fade").each(function() {
+      /* Check the location of each desired element */
+      var objectBottom = $(this).offset().top + $(this).outerHeight();
+
+      /* If the element is completely within bounds of the window, fade it in */
+      if (objectBottom < windowBottom) { //object comes into view (scrolling down)
+        if ($(this).css("opacity") == 0) {
+          $(this).fadeTo(500, 1);
+        }
+      } else { //object goes out of view (scrolling up)
+        if ($(this).css("opacity") == 1) {
+          $(this).fadeTo(500, 0);
+        }
+      }
+    });
+  }).scroll(); //invoke scroll-handler on page-load
+});
+
+  </script>
 
   <h1 align="center" style="background-color: blue;font-size: 40px;">SHOULDER-INTERMEDIATE</h1>
 <div class="container">  
-<div class="left">  
-<video src="images/swimmer.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
+<div class="left">
+<div class="fade">  
+<video src="images/swimmer.mp4" width="150%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/hoverpushup.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/hoverpushup.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/floorstretchright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/floorstretchright.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/floorstretchleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/floorstretchleft.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/cat.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/cat.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/sissors.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/sissors.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/prone.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/prone.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/pulls.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/pulls.mp4" width="150%" height="12%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
@@ -109,28 +141,36 @@ body{
         <button onclick="nottired()" style="padding:1%; border-radius: 30px;">Not Exausted!!</button>
 </div>  
 <div class="right">  
-<video src="images/childpose.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+    <div class="fade">
+<video src="images/childpose.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/hiphinge.mp4" width="150%" height="10%" autoplay="true" muted="true"loop="true" class="i"></video>
+<div class="fade">
+<video src="images/hiphinge.mp4" width="150%" height="10%" autoplay="true" muted="true"loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/kickbacktriceps.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/kickbacktriceps.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/knee.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/knee.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/prone.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/prone.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/inclinepushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/inclinepushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/hoverpushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/hoverpushup.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
-<video src="images/cat.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video>
+<div class="fade">
+<video src="images/cat.mp4" width="150%" height="10%" autoplay="true" muted="true" loop="true" class="i"></video></div>
 <br>
 <br>
 
