@@ -8,21 +8,33 @@
 	*{
 		background-color: white;
 	}
+	@media only screen and (max-width: 440px) {
+  	video.i{
+  		width: 100%;
+  	}
+  	video.j{
+  		width: 20%;
+  	}
+  	img.k{
+  		width: 70%;
+  		height: 50%;
+  	}
+}
 </style>
 <body>
 
 
 	<div align="center">
-	<video src="images/fish pose.mp4" width="60%" height="10%" autoplay="autoplay" muted="true" loop="true"></video>
+	<video src="images/fish pose.mp4" width="60%" height="10%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
 
 	<br>
-	<img src="images/fish pose 1.png" height="300px">
+	<img src="images/fish pose 1.png" height="300px" class="k">
 	<br>
 	<button onclick="pausev()" style="border: none; border-radius:55%; background-color: white; margin-right: 20px;"><img src="images/pause.jpg" width="50px" height="50px" ></button>
 
-	<video src="images/clock.mp4" id="clock" width="5%" height="2%" autoplay="true" muted="true" style="border-radius: 55%;"></video>
+	<video class="j" src="images/clock.mp4" id="clock" width="5%" height="2%" autoplay="true" muted="true" style="border-radius: 55%;"></video>
 
-<button onclick="document.location='dog.html'" style="border: none; border-radius:55%; background-color: white; margin-right: 20px;"><img src="images/next.jpg" width="50px" height="50px" ></button>
+<button onclick="document.location='dog.html'" style="border: none; border-radius:55%; background-color: white; margin-left: 20px;"><img src="images/next.jpg" width="50px" height="50px" ></button>
 
 
 
