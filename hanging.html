@@ -8,18 +8,29 @@
 	*{
 		background-color: white;
 	}
+	@media only screen and (max-width: 440px) {
+  	
+  	video.i{
+  		width: 110%;
+
+  	}
+  	video.j{
+  		width: 20%;
+  	}
+
+}
 </style>
 <body>
 
 
 	<div align="center">
-	<video src="images/hanging.mp4" width="45%" height="12%" autoplay="autoplay" muted="true" loop="true"></video>
+	<video src="images/hanging.mp4" width="45%" height="12%" autoplay="autoplay" muted="true" loop="true" class="i"></video>
 
 	<br>
 
 	<button onclick="pausev()" style="border: none; border-radius:55%; background-color: white; margin-right: 20px;"><img src="images/pause.jpg" width="50px" height="50px" ></button>
 
-	<video src="images/40s.mp4" id="clock" width="5%" height="2%" autoplay="true" muted="true" style="border-radius: 55%;"></video>
+	<video class="j" src="images/40s.mp4" id="clock" width="5%" height="2%" autoplay="true" muted="true" style="border-radius: 55%;"></video>
 
 <button onclick="a()" style="border: none; border-radius:55%; background-color: white; margin-left: 15px;"><img src="images/next.jpg" width="50px" height="50px" ></button>
 <br><br>
