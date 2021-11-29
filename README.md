@@ -1,5 +1,5 @@
 # MyFitness
-# DEVELOPED BY YASH CHITRODA
+# DEVELOPED BY YASH CHITRODA.
 View Website:👇 
 <br>
 <a href="https://yashchitroda.github.io/MyFitness/">yashchitroda.github.io/MyFitness/</a><br><br>
