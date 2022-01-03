@@ -77,7 +77,7 @@ This code of conduct and its related procedures also applies to unacceptable beh
 
 ## 10. Contact info
 
-yashchitroda2@gmail.com
+yashchitroda2@gmail.com / myfitness.org.in@gmail.com 
 
 ## 11. License and attribution
 
